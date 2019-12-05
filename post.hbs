@@ -11,8 +11,43 @@
         </div>
         {{> post-tags}}
       </article>
+
+      <!-- Email Signup -->
+<div style="background-color: #e4e4ea;border-radius:5px;padding:25px;height: auto;margin: 25px 0px;">
+<h2>Useful? Interesting?</h2><p>I write about designing things, building things, and implementing things in the real world. It's infrequent, but it that sounds interesting to you, sign up for fresh-in-your-inbox updates below.</p>
+
+          <form action="http://romandesign.co/sendy/subscribe" method="POST" accept-charset="utf-8" _lpchecked="1" style="width: 100%;height: auto;display: inline-block;">
+              
+              <input type="email" name="email" id="email" placeholder="Your Email Address" style="
+              display: inline;
+              float: left;
+              width: 70%;
+              border-radius: 0px;
+              height: 40px;
+              border: solid 6px white;
+              background-color: white;
+              ">
+              <div style="display:none;">
+              <input type="hidden" name="list" value="Ext8926cMMsNQm6fRmNTa80A">
+              <input type="hidden" name="subform" value="yes">
+              <label for="hp">HP</label><br>
+              <input type="text" name="hp" id="hp">
+              </div>
+              <input type="Submit" name="submit" id="Submit" style="
+              display: inline-block;
+              float: right;
+              width: 30%;
+              height: 40px;
+              font-size: 15px;
+              box-shadow: none;
+              border: 6px solid white;
+              background-color: #e4e4ea;
+              ">
+          </form>
+</div>
+      <!-- End Email Signup -->
+
     {{/post}}
     {{> related}}
-    {{> disqus}}
   </main>
 </div>

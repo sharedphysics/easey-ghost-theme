@@ -96,6 +96,8 @@ samp {
   /* 1 */
   font-size: 1em;
   /* 2 */
+  background: #f4f8fb;
+  border: 1px solid #e5eff5;
 }
 /**
  * Add the correct font size in all browsers.
@@ -386,11 +388,19 @@ figcaption {
 pre {
   margin: 30px 0;
   overflow-x: scroll;
+  background: #f4f8fb;
+  border: 1px solid #e5eff5;
+  padding:10px;
+}
+pre code {
+  border:0px !important;
 }
 code {
   font-size: 14px;
+  background: #f4f8fb;
+  border: 1px solid #e5eff5;
 }
-hr {
+/* hr {
   background-color: #999;
   border: 0;
   border-radius: 50%;
@@ -413,7 +423,7 @@ hr:before {
 }
 hr:after {
   left: 20px;
-}
+} */
 @media (max-width: 767px) {
   blockquote {
     margin-left: 0;
@@ -1875,4 +1885,19 @@ input[type="email"]:focus {
 }
 .icon-vk:before {
   content: "\e941";
+}
+/* CUSTOM STYLES */
+.gradient-bg {
+background: -moz-linear-gradient(-45deg, #bfd255 0%, #57d631 100%);
+  background: -webkit-linear-gradient(-45deg, #bfd255 0%, #57d631 100%);
+  background: linear-gradient(135deg, #bfd255 0%, #57d631 100%);
+}
+hr {
+background: -moz-linear-gradient(-45deg, #bfd255 0%, #57d631 100%);
+  background: -webkit-linear-gradient(-45deg, #bfd255 0%, #57d631 100%);
+  background: linear-gradient(135deg, #bfd255 0%, #57d631 100%);
+  height:15px; 
+  width:100%; 
+  margin:10px 0px; 
+  padding:0px;
 }
