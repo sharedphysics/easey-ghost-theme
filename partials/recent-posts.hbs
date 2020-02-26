@@ -1,0 +1,30 @@
+<!-- Recent Posts -->
+  <div class="loop-posts-div">
+    <h3 style="padding-bottom: 20px; border-bottom: 1px solid #ccc;margin-bottom: 20px;">Recent Posts</h3>
+  {{#get "posts" limit="20" include="tags" order="published_at desc"}}
+      {{#foreach posts}}
+      <p><a href="{{url}}">{{title}}</a> <span style="font-size: 0.8em !important; opacity:0.5;">{{date}} | <span style="padding: 3px 7px; border-radius: 3px; border: 1px solid #e0e0e0;">{{tags separator=", "}}</span></span></p>
+      {{/foreach}}
+  {{/get}}
+
+  <!-- Subscribe Form -->
+  <div style="margin-bottom:25px;">
+    <form class="subscribe-form" data-members-form="subscribe">
+      <input class="subscribe-email" type="email" data-members-email placeholder="{{t 'Interested? Get updates when I write something new.'}}" required="true" autocomplete="false">
+      <button class="subscribe-button" type="submit">
+        {{> loader}}
+      </button>
+      <div class="notification notification-success">
+        {{t 'Great! Check your inbox and click the link to complete signin.'}}
+        <button class="button-icon notification-close"><i class="icon icon-window-close"></i></button>
+      </div>
+      <div class="notification notification-error">
+        {{t 'Please enter a valid email address!'}}
+        <button class="button-icon notification-close"><i class="icon icon-window-close"></i></button>
+      </div>
+    </form>
+  </div>
+  <!-- End Subscribe Form -->
+
+  </div>
+<!-- End Recent Posts -->

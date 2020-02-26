@@ -2,20 +2,28 @@
 
 <div class="content-area">
   <main class="site-main">
-    {{> featured}}
 
-<!-- Recent Posts -->
-  <div style="background-color: #f7f7f7;padding: 40px 50px 20px 50px;margin-bottom: 50px;">
-    <h3 style="padding-bottom: 20px; border-bottom: 1px solid #ccc;margin-bottom: 20px;">Recent Posts</h3>
-  {{#get "posts" limit="5" include="tags" order="published_at desc"}}
-      {{#foreach posts}}
-      <p><a href="{{url}}">{{title}}</a> <span style="font-size: 0.8em !important; opacity:0.5;">{{date}} | <span style="padding: 3px 7px; border-radius: 3px; border: 1px solid #e0e0e0;">{{tags separator=", "}}</span></span></p>
+<!-- GET "ABOUT ME" PAGE" -->
+  {{#get "pages" limit="1" include="content" filter="tag:about" order="published_at desc"}}
+      {{#foreach pages}}
+      <p>{{content}}</p>
       {{/foreach}}
   {{/get}}
-  </div>
-<!-- End Recent Posts -->
 
-    {{#get "tags" limit="all" include="count.posts"}}
+  <div class="gradient-bg" style="height:15px; width:100%; margin:50px 0px 0px 0px; padding:0px;"> </div>
+
+<!-- END GET "ABOUT ME" PAGE" -->
+
+<!-- Recent Posts Loop -->
+{{> recent-posts}}
+
+
+
+<!-- Featured Loop -->
+{{> featured}}
+
+<!-- Tags Loops -->
+    {{#get "tags" limit="all" include="count.posts" filter="slug:-about"}}
       <div class="topic-feed">
         <div class="row">
           {{#foreach tags}}
