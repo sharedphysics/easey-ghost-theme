@@ -1,7 +1,7 @@
 {
   "name": "easey",
   "description": "A Modified Ease Theme",
-  "version": "2.0.18",
+  "version": "2.0.19",
   "engines": {
       "ghost": ">=3.0.0",
       "ghost-api": "v3"
