@@ -2,7 +2,7 @@
   {{#if featured}}
     <section class="featured-wrapper">
       <header class="featured-header topic-header">
-        <h2 class="featured-title topic-name">{{t 'Featured Projects & Work'}}</h2>
+        <h2 class="featured-title topic-name">{{t 'Projects'}}</h2>
       </header>
       <div class="featured-posts owl">
         {{#foreach featured}}
@@ -10,7 +10,7 @@
             {{> post-media small_image=true same_height=true ratio="horizontal"}}
             {{> post-header tag="h2" hide_author=true}}
             {{#primary_tag}}
-              <a class="post-tag tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+              <!-- <a class="post-tag tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a> -->
             {{/primary_tag}}
           </article>
         {{/foreach}}

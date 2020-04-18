@@ -2293,6 +2293,12 @@ background: -moz-linear-gradient(-45deg, #bfd255 0%, #57d631 100%);
 .loop-posts-div {
   background-color: #f7f7f7;padding: 40px 50px 20px 50px;margin-bottom: 50px;
 }
-
-
+.recent-post {
+  font-size: 0.8em !important; 
+  opacity:0.5;
+}
+.recent-read-more {
+  font-size: 0.7em !important; 
+  opacity:0.5;
+}
 

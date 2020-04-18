@@ -1,11 +1,15 @@
 <!-- Recent Posts -->
   <div class="loop-posts-div">
     <h3 style="padding-bottom: 20px; border-bottom: 1px solid #ccc;margin-bottom: 20px;">Recent Posts</h3>
-  {{#get "posts" limit="20" include="tags" order="published_at desc"}}
+  {{#get "posts" limit="10" include="tags,reading_time,excerpt" order="published_at desc"}}
       {{#foreach posts}}
-      <p><a href="{{url}}">{{title}}</a> <span style="font-size: 0.8em !important; opacity:0.5;">{{date}} | <span style="padding: 3px 7px; border-radius: 3px; border: 1px solid #e0e0e0;">{{tags separator=", "}}</span></span></p>
+      <p><a href="{{url}}">{{title}}</a><br><span class="recent-post">{{date}} | {{reading_time}} | <span style="padding: 3px 7px; border-radius: 3px; border: 1px solid #e0e0e0;">{{tags separator=", "}}</span></span><br>
+        <span class="recent-post">{{excerpt}}</span><br>
+        <strong><a class="recent-read-more button-arrow button-arrow-right" href="{{url}}">Continue Reading</a></strong></p>
       {{/foreach}}
   {{/get}}
+
+  <p> See All Posts Below </p>
 
   <!-- Subscribe Form -->
   <div style="margin-bottom:25px;">
