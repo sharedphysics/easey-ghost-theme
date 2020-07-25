@@ -1,19 +1,20 @@
 {
-  "name": "easey",
+  "name": "Easey",
   "description": "A Modified Ease Theme",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "engines": {
       "ghost": ">=3.0.0",
       "ghost-api": "v3"
   },
   "author": {
     "name": "Roman Design Co.",
-    "email": "tech@romandesign.co",
+    "email": "hi@romandesign.co",
     "url": "https://romandesign.co"
   },
   "keywords": [
     "ghost",
     "theme",
+    "romandesignco",
     "ghost-theme"
   ],
   "config": {
